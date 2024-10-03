@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping</title>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css" />
+</head>
+<body>
+    <ion-app>
+        <ion-header>
+            <ion-toolbar>
+                <ion-title class="ion-text-center">SHOPPING CART DISCOUNT</ion-title>
+            </ion-toolbar>
+        </ion-header>
+
+        <ion-content>
+            <ion-item>
+                <ion-label position="floating">Name: </ion-label><br>
+                <ion-input 
+                id="name" 
+                type="text" 
+                placeholder="Enter your name"></ion-input>
+            </ion-item>
+
+            <ion-item>
+                <ion-label position="floating">Product Name:</ion-label><br>
+                <ion-input 
+                id="product_name" 
+                type="text" 
+                placeholder="Enter product name"></ion-input>
+            </ion-item>
+
+            <ion-item>
+                <ion-label position="floating">Price: </ion-label><br>
+                <ion-input 
+                id="price" 
+                type="number" 
+                placeholder="Enter price"></ion-input>
+            </ion-item>
+
+            <br>
+            <ion-item>
+                <ion-label>DISCOUNT</ion-label>
+                <ion-select id="discount" placeholder="Apply Discount?">
+                    <ion-select-option value="Yes">Yes</ion-select-option>
+                    <ion-select-option value="No">No</ion-select-option>
+                </ion-select>
+            </ion-item>
+        
+
+            <ion-card id="receipt" style="display:block">
+                <ion-card-header>
+                    <ion-card-title>SHOPPING CART</ion-card-title>
+                    <ion-card-subtitle id="resName"></ion-card-subtitle>
+                    <ion-card-subtitle id="resProductName"></ion-card-subtitle>
+                    <ion-card-subtitle id="resPrice"></ion-card-subtitle>
+                    <ion-card-subtitle id="resDiscount" style="display:none"></ion-card-subtitle>
+                    <ion-card-subtitle id="resFinalPrice" style="display:none"></ion-card-subtitle>
+                </ion-card-header>
+            </ion-card>
+        </ion-content>
+
+        <ion-footer>    
+            <ion-toolbar>
+                <ion-button class="ion-padding" 
+                    expand="block" 
+                    onclick="triggerMode()" 
+                    color="primary"
+                    fill="outline"><b>SUBMIT ORDER</b></ion-button>
+            </ion-toolbar>
+        </ion-footer>
+        
+    </ion-app>
+
+    <script src="script.js"></script>
+</body>
+</html>
